@@ -1,0 +1,47 @@
+@use "../../partials/variables" as *;
+@use "../../partials/mixins" as *;
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  // background-color: $darkp;;
+  width: 100%;
+  @include tablet-view {
+    flex-direction: row;
+    height: 3.5rem;
+  }
+  &__links {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 100%;
+    @include tablet-view {
+      flex-direction: row;
+    }
+  }
+  &__container {
+    text-decoration: none;
+    margin-top: 0.25rem;
+    @include tablet-view {
+      padding: 0.5rem;
+      border-radius: 0.5rem;
+    }
+    &:hover {
+      background-color: $purple;
+      color: rgb(0, 0, 0);
+    }
+    &-link {
+      width: 100%;
+      text-decoration: none;
+      color: $whiteish;
+      font-weight: 600;
+      @include tablet-view {
+        font-size: 1.25rem;
+      }
+      @include desktop-view {
+        font-size: 1.5rem;
+      };
+    };
+  };
+};
